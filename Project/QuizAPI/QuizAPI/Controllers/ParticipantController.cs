@@ -17,31 +17,16 @@ namespace QuizAPI.Controllers
 
         // GET: api/Participant
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Participant>>> GetParticipants()
-        {
-          if (_context.Participants == null)
-          {
-              return NotFound();
-          }
-            return await _context.Participants.ToListAsync();
-        }
-
+        public async Task<ActionResult<IEnumerable<Participant>>> GetParticipants() =>
+            await _context.Participants.ToListAsync();
+        
         // GET: api/Participant/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Participant>> GetParticipant(int id)
         {
-          if (_context.Participants == null)
-          {
-              return NotFound();
-          }
             var participant = await _context.Participants.FindAsync(id);
 
-            if (participant == null)
-            {
-                return NotFound();
-            }
-
-            return participant;
+            return participant is null ? NotFound() : participant;
         }
 
         // PUT: api/Participant/5
@@ -54,9 +39,9 @@ namespace QuizAPI.Controllers
                 return BadRequest();
             }
 
-            Participant participant = _context.Participants.Find(id);
-            participant.result = result;
-
+            Participant participant = _context.Participants.First(x => x.ParticipantId == id);
+            (participant.Score, participant.TimeTaken) = result;
+            
             _context.Entry(participant).State = EntityState.Modified;
 
             try
@@ -83,11 +68,11 @@ namespace QuizAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Participant>> PostParticipant(Participant participant)
         {
+            Console.WriteLine("Post" + participant);
             var temp = _context.Participants
-                .Where(x => x.Name == participant.Name && x.Email == participant.Email)
-                .FirstOrDefault();
+                .FirstOrDefault(x => x.Name == participant.Name && x.Email == participant.Email);
 
-            if (temp == null)
+            if (temp is null)
             {
                 _context.Participants.Add(participant);
                 await _context.SaveChangesAsync();
@@ -107,6 +92,7 @@ namespace QuizAPI.Controllers
                 return NotFound();
             }
             var participant = await _context.Participants.FindAsync(id);
+            Console.WriteLine(participant);
             if (participant == null)
             {
                 return NotFound();

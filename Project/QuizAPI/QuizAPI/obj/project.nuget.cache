@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cRvPCtDw3nhQVjXwOKHR530CknPtPud6+7a66irG3E2hYhzcwl29lhJzIk07+AAgpF85s5AiphTkfkEm/rV8og==",
+  "dgSpecHash": "JUWz7i0pjxoK1ITIHAPC93idTpQOImW67NBGawh2XuGHcTcb8oVb5ztYJ+0t6I9COvEtMVRhlr9w3CADqwD3mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
+  "projectFilePath": "D:\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

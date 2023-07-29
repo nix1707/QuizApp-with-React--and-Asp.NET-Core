@@ -11799,11 +11799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
+      "projectUniqueName": "D:\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
       "projectName": "QuizAPI",
-      "projectPath": "C:\\Users\\admin\\Desktop\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
+      "projectPath": "D:\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\obj\\",
+      "outputPath": "D:\\Quiz App with React and NET Core\\Project\\QuizAPI\\QuizAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

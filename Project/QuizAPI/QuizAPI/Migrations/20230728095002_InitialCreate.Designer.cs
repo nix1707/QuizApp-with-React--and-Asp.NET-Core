@@ -11,8 +11,8 @@ using QuizAPI.Models;
 namespace QuizAPI.Migrations
 {
     [DbContext(typeof(QuizDbContext))]
-    [Migration("20230711084711_initial create")]
-    partial class initialcreate
+    [Migration("20230728095002_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,18 +33,10 @@ namespace QuizAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ParticipantId"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("Score")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TimeTakem")
-                        .HasColumnType("int");
 
                     b.HasKey("ParticipantId");
 
